@@ -1,0 +1,37 @@
+<div class="cart">
+  <div class="main">
+    <div class="left">
+      <img routerLink="/home" class="logo2" src="assets/logo.png" alt="">
+      <p class="items">Items:</p>
+      @for (item of cartItems; track item.id) {
+        <div class="product">
+          <img [src]="item.product.image" alt="{{ item.product.name }}">
+          <div class="info">
+            <p>"{{ item.product.name }}"</p>
+            <p>Price: {{ item.product.price }} ₸</p>
+            <p>Quantity: {{ item.quantity }}</p>
+            <p>Subtotal: {{ item.product.price * item.quantity }} ₸</p>
+            <button class="apply-btn" (click)="removeItem(item.id)">Delete</button>
+          </div>
+        </div>
+      } @empty {
+        <p class="empty-cart">Your cart is empty.</p>
+      }
+    </div>
+    <div class="right">
+      <div class="check">
+        <div class="top">
+          <p>Shopping Cart</p>
+        </div>
+        <div class="summary">
+          <p class="summary1">Summary</p>
+          <p class="subtotal">Total: {{ total }} ₸</p>
+        </div>
+      </div>
+      <div class="buttons">
+        <button routerLink="/home" class="buy">Buy</button>
+        <button routerLink="/products" class="continue">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>

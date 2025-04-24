@@ -1,0 +1,19 @@
+<div class="login">
+  <div class="logo">
+    <img routerLink="/" src="assets/logo.png" alt="">
+  </div>
+  <div class="hero">
+    <p class="one">Login</p>
+    <div>
+      <input type="text" placeholder="Username" [(ngModel)]="username">
+      <input type="password" placeholder="Password" [(ngModel)]="password">
+    </div>
+    <div class="some">
+      <button class="tiger" (click)="onLogin()">Login</button>
+    </div>
+    <p class="reg">Don't have an account? <a class="enemy" routerLink="/register">Create one</a></p>
+  </div>
+  <div class="foot">
+    <img src="assets/tulip2.png" alt="">
+  </div>
+</div>

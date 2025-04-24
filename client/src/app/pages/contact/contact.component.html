@@ -1,0 +1,93 @@
+<header>
+  <div class="header-wrapper">
+    <div class="logo">
+      <img routerLink="/home" src="assets/logo.png" alt="" />
+    </div>
+
+    <nav>
+      <p routerLink="/home">Home</p>
+      <p class="one" routerLink="/about">About Us</p>
+      <p routerLink="/products">Products</p>
+      <p class="one" routerLink="/contact">Contact Us</p>
+    </nav>
+
+    <div class="auth">
+      <fa-icon routerLink="/cart" class="cart" [icon]="faShoppingCart"></fa-icon>
+
+      <div class="dropdown user-dropdown" (mouseenter)="openDropdown()" (mouseleave)="closeDropdown()">
+        <button
+          class="btn btn-link dropdown-toggle p-0"
+          type="button"
+          id="userDropdown"
+          [attr.aria-expanded]="dropdownOpen"
+        >
+          <fa-icon class="user" [icon]="faUser"></fa-icon>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end show-on-hover" [class.show]="dropdownOpen">
+          <li><a routerLink="/" class="dropdown-item" (click)="logout()"> > Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+<div class="main">
+  <div class="hero">
+    <div class="top">
+      <p class="hero1">Contact us</p>
+      <p class="hero2">Get in touch with us for any enquiries and questions</p>
+      <div class="contact">
+        <a href="https://t.me/dalid_a" target="_blank">Telegram</a>
+        <a href="https://wa.me/77772930044" target="_blank">Whatsapp</a>
+      </div>      
+    </div>
+    <div class="bottom">
+      <div>
+        <p class="big">Orders</p>
+        <p class="small">petalpoetrymail.com</p>
+        <p class="small">petal_poetry</p>
+        <p class="small">+7 777 666 33 22</p>
+      </div>
+      <div>
+        <p class="big">Collaborations</p>
+        <p class="small">petalpoetrycooinbox.com</p>
+        <p class="small">+7 776 688 96 97</p>
+      </div>
+      <div>
+        <p class="big">Address</p>
+        <p class="small">Tole bi, 59</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <p>PetalPoetry © 2025</p>
+    </div>
+
+    <div class="footer-links">
+      <a routerLink="/about">About</a>
+      <a routerLink="/products">Products</a>
+      <a routerLink="/contact">Contact</a>
+    </div>
+
+
+    <div>
+      <p>Contact us</p>
+      <div>
+        <p>Phone: +7(777)200-0044</p>
+        <p>Almaty, some street</p>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,99 @@
+<header>
+  <div class="header-wrapper">
+    <div class="logo">
+      <img routerLink="/home" src="assets/logo.png" alt="" />
+    </div>
+
+    <nav>
+      <p routerLink="/home">Home</p>
+      <p class="one" routerLink="/about">About Us</p>
+      <p routerLink="/products">Products</p>
+      <p class="one" routerLink="/contact">Contact Us</p>
+    </nav>
+
+    <div class="auth">
+      <fa-icon routerLink="/cart" class="cart" [icon]="faShoppingCart"></fa-icon>
+
+      <div class="dropdown user-dropdown" (mouseenter)="openDropdown()" (mouseleave)="closeDropdown()">
+        <button
+          class="btn btn-link dropdown-toggle p-0"
+          type="button"
+          id="userDropdown"
+          [attr.aria-expanded]="dropdownOpen"
+        >
+          <fa-icon class="user" [icon]="faUser"></fa-icon>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end show-on-hover" [class.show]="dropdownOpen">
+          <li><a routerLink="/" class="dropdown-item" (click)="logout()"> > Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<div class="products">
+  <div class="main">
+    <div class="filter">
+      <!-- <p>Filter by Type:</p>
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" (change)="toggleCategory('4')">
+          Bouquets
+        </label>
+        <label>
+          <input type="checkbox" (change)="toggleCategory('1')">
+          Flowers
+        </label>
+        <label>
+          <input type="checkbox" (change)="toggleCategory('3')">
+          Toys
+        </label>
+      </div> -->
+      <p>Filter by Size:</p>
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" (change)="toggleSize('XL')">
+          XL
+        </label>
+        <label>
+          <input type="checkbox" (change)="toggleSize('L')">
+          L
+        </label>
+        <label>
+          <input type="checkbox" (change)="toggleSize('M')">
+          M
+        </label>
+        <label>
+          <input type="checkbox" (change)="toggleSize('S')">
+          S
+        </label>
+      </div>
+    
+      <div class="price-filter">
+        <p>Filter by Price:</p>
+        <div class="slider-container">
+          <input type="range" min="0" max="250000" [(ngModel)]="maxPrice">
+          <span>{{maxPrice}} ₸</span>
+        </div>
+      </div>      
+    
+      <button class="apply-btn" (click)="applyFilters()">Apply Filters</button>
+    </div>    
+    <div class="product-list">
+      @for (product of products; track product.id) {
+        <div class="product-card">
+          <img [routerLink]="'/products/' + product.id" [src]="product.image" alt="{{product.name}}">
+          <p>"{{product.name}}"</p>
+          <p>{{product.price}} ₸</p>
+          <button (click)="addToCart(product.id)">Add to cart</button>
+        </div>
+      }
+      <div class="pagination-buttons">
+        <button (click)="goToPrevPage()" [disabled]="!prevPage">Previous</button>
+        <button (click)="goToNextPage()" [disabled]="!nextPage">Next</button>
+      </div>  
+    </div>      
+  </div>
+</div>

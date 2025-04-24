@@ -1,0 +1,143 @@
+<header>
+  <div class="header-wrapper">
+    <div class="logo">
+      <img routerLink="/home" src="assets/logo.png" alt="" />
+    </div>
+
+    <nav>
+      <p routerLink="/home">Home</p>
+      <p class="one" routerLink="/about">About Us</p>
+      <p routerLink="/products">Products</p>
+      <p class="one" routerLink="/contact">Contact Us</p>
+    </nav>
+
+    <div class="auth">
+      <fa-icon routerLink="/cart"  class="cart" [icon]="faShoppingCart"></fa-icon>
+
+      <div class="dropdown user-dropdown" (mouseenter)="openDropdown()" (mouseleave)="closeDropdown()">
+        <button
+          class="btn btn-link dropdown-toggle p-0"
+          type="button"
+          id="userDropdown"
+          [attr.aria-expanded]="dropdownOpen"
+        >
+          <fa-icon class="user" [icon]="faUser"></fa-icon>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end show-on-hover" [class.show]="dropdownOpen">
+          <li><a routerLink="/" class="dropdown-item" (click)="logout()"> > Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<div class="main">
+  <div class="hero">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/9.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="assets/10.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="assets/11.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="cards2">
+    <div class="card2">
+      <img src="assets/11.png" alt="">
+      <div class="card2text">
+        <p>10% DISCOUNT ON</p>
+        <p>PRIVATE EVENTS</p>
+        <button routerLink="/products">Shop now -></button>
+      </div>
+    </div>
+    <div class="card2">
+      <img src="assets/22.png" alt="">
+      <div class="card2text">
+        <p>10% DISCOUNT ON</p>
+        <p>Big Bouqets</p>
+        <button routerLink="/products">Shop now -></button>
+      </div>
+    </div>
+    <div class="card2">
+      <img src="assets/33.png" alt="">
+      <div class="card2text">
+        <p>10% DISCOUNT ON</p>
+        <p>WEDDINGS</p>
+        <button routerLink="/products">Shop now -></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <p>PetalPoetry © 2025</p>
+    </div>
+
+    <div class="footer-links">
+      <a routerLink="/about">About</a>
+      <a routerLink="/products">Products</a>
+      <a routerLink="/contact">Contact</a>
+    </div>
+
+
+    <div>
+      <p>Contact us</p>
+      <div>
+        <p>Phone: +7(777)200-0044</p>
+        <p>Almaty, some street</p>
+      </div>
+    </div>
+  </div>
+</footer>

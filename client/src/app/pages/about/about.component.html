@@ -1,0 +1,75 @@
+<header>
+  <div class="header-wrapper">
+    <div class="logo">
+      <img routerLink="/home" src="assets/logo.png" alt="" />
+    </div>
+
+    <nav>
+      <p routerLink="/home">Home</p>
+      <p class="one" routerLink="/about">About Us</p>
+      <p routerLink="/products">Products</p>
+      <p class="one" routerLink="/contact">Contact Us</p>
+    </nav>
+
+    <div class="auth">
+      <fa-icon routerLink="/cart" class="cart" [icon]="faShoppingCart"></fa-icon>
+
+      <div class="dropdown user-dropdown" (mouseenter)="openDropdown()" (mouseleave)="closeDropdown()">
+        <button
+          class="btn btn-link dropdown-toggle p-0"
+          type="button"
+          id="userDropdown"
+          [attr.aria-expanded]="dropdownOpen"
+        >
+          <fa-icon class="user" [icon]="faUser"></fa-icon>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end show-on-hover" [class.show]="dropdownOpen">
+          <li><a routerLink="/" class="dropdown-item" (click)="logout()"> > Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<div class="main">
+  <div class="hero">
+    <div class="left">
+      <div class="top">
+        <p class="big">About Us:</p>
+        <p class="small">Our flower shop is a place where feelings live. We create bouquets that speak for you: about love, gratitude, care or joy. Each flower, each composition is collected with soul to give you and your loved ones a little happiness.</p>
+      </div>
+      <div class="bottom">
+        <p class="big">Values</p>
+        <p class="small">We believe that even one flower can change the day. That is why it is important for us: honesty, freshness, and respect for the client.</p>
+      </div>
+    </div>
+    <div class="right">
+      <img src="assets/aboutus2.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <p>PetalPoetry © 2025</p>
+    </div>
+
+    <div class="footer-links">
+      <a routerLink="/about">About</a>
+      <a routerLink="/products">Products</a>
+      <a routerLink="/contact">Contact</a>
+    </div>
+
+
+    <div>
+      <p>Contact us</p>
+      <div>
+        <p>Phone: +7(777)200-0044</p>
+        <p>Almaty, some street</p>
+      </div>
+    </div>
+  </div>
+</footer>

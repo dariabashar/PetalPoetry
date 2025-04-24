@@ -1,0 +1,26 @@
+<div class="register">
+  <div class="logo">
+    <img routerLink="/" src="assets/logo.png" alt="">
+  </div>
+  <div class="main">
+    <div class="hero">
+      <p class="one">Register</p>
+      <div>
+        <input type="text" placeholder="Username" [(ngModel)]="username">
+        <input type="text" placeholder="Email" [(ngModel)]="email">
+        <input type="text" placeholder="First name" [(ngModel)]="firstName">
+        <input type="text" placeholder="Last name" [(ngModel)]="lastName">
+        <input type="text" placeholder="Phone number" [(ngModel)]="phoneNumber">
+        <input type="password" placeholder="Create password" [(ngModel)]="password">
+        <input type="password" placeholder="Confirm password" [(ngModel)]="confirmPassword">
+      </div>
+      <div class="some">
+        <button class="tiger" (click)="onRegister()">Submit</button>
+      </div>
+      <p class="reg">Already have an account?  <a class="enemy" routerLink="/login">Login</a></p>
+    </div>
+  </div>
+  <div class="foot">
+    <img src="assets/tulip2.png" alt="" >
+  </div>
+</div>

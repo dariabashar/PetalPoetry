@@ -1,0 +1,37 @@
+.product{
+  background-color: #FBD9E5;
+  color: #4A202A;
+  padding-bottom: 200px;
+}
+.main{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  background-color: white;
+  padding: 20px 20px 20px 20px;
+  border-radius: 50px;
+}
+.quantity-selector button{
+  font-size: x-large;
+}
+
+.quantity-selector input{
+  font-size: x-large;
+  padding-left: 50px;
+  width: 20%;
+}
+
+.apply-btn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: none;
+  background: linear-gradient(90deg, #C3325B, #E1708D);
+  color: white;
+  font-size: large;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.apply-btn:hover {
+  background: #C3325B;
+}
